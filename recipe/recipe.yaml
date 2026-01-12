@@ -1,6 +1,6 @@
 context:
   name: evo
-  version: "1.34.1"
+  version: "1.34.2"
   python_min: 3.10
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 98aff1ed2918ebd12efdd58ea92e156cbe0b02f54d5ff0a620db455fc9d50085
+    sha256: 6880b7e398d0614c85be2fb2ee86bfa226ad8f16cbcda56b5ec77baee606baa7
 
 build:
   noarch: python
