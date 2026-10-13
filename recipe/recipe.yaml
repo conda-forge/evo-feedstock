@@ -1,7 +1,6 @@
 context:
   name: evo
-  version: "1.37.1"
-  python_min: "3.10"
+  version: "1.38.0"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 310362579fc9a7c68b2a7e6ff2b947fd2698846aef90fd8e8f68bc0b44f31343
+    sha256: 2de3b681161f6888f637384fc0a94f4b9985ec86361c8413c1d145ee1f0ce237
 
 build:
   noarch: python
@@ -43,7 +42,7 @@ requirements:
     - pillow
     - pygments
     - pyyaml
-    - rosbags >=0.9.20
+    - rosbags >=0.11.7
     - scipy
     - seaborn
     - contextily
@@ -53,7 +52,9 @@ tests:
       imports:
         - evo
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/MichaelGrupp/evo
